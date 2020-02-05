@@ -16,15 +16,16 @@
       <th></th>
     </tr>
   </thead>
-  <tbody *ngFor="let i of arrUser; let i=index" >
+  <tbody *ngFor="let i of arrUser; let i=index;" >
    <tr align="center" *ngIf="i.name!=null">
       <!--<td>{{i.userId}}</td>-->
+      
       <td>{{i.id}}</td>
       <td>{{i.name}}</td>
       <td>{{i.emailId}}</td>
       <td>{{i.password}}</td>
       <td><a [routerLink]="['/user/edit',i.id]"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
-      <td><a (click)="delete(i)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+      <td><a (click)="delete(i.id)">DELETE</a></td>
       
       
     </tr>
