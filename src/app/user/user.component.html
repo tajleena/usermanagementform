@@ -1,0 +1,38 @@
+<form>
+<div class="container">
+  <div class="col-md-6 offset-md-3">
+    <h4>User List</h4>
+
+<button [routerLink]="'/user/add'" class="btn btn-success">ADD User</button>
+<table class="table table-striped">
+  <thead>
+    
+   <tr>
+    <!-- <th scope="col">Id</th>-->
+      <th scope="col">User Id</th>
+      <th scope="col">User Name</th>
+      <th scope="col">User Email</th>
+      <th scope="col">User Password</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let i of arrUser; let i=index" >
+   <tr align="center" *ngIf="i.name!=null">
+      <!--<td>{{i.userId}}</td>-->
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.emailId}}</td>
+      <td>{{i.password}}</td>
+      <td><a [routerLink]="['/user/edit',i.id]"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+      <td><a (click)="delete(i)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+      
+      
+    </tr>
+     </tbody>
+   
+ 
+</table>
+<button class="btn btn-primary" (click)="back()">Back</button>
+</div></div>
+</form>
+<router-outlet></router-outlet>

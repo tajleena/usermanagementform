@@ -1,0 +1,36 @@
+
+<form [formGroup]="signUpFormGroup">
+  <div class="container">
+  <div class="jumbotron">
+  <div class="col-md-6 offset-md-3">
+ 
+  <div class="form-row">
+
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Id</label>
+      <input type="number" class="form-control" formControlName='id' >
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Name</label>
+      <input type="text" class="form-control" formControlName='name' placeholder="name">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="inputAddress">Email</label>
+    <input type="text" class="form-control" formControlName='emailId' placeholder="email">
+  </div>
+   <div class="form-group">
+    <label for="inputAddress">Password</label>
+    <input type="password" class="form-control" formControlName='password' placeholder="password">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" (click)="onAddUser()">Create User</button>
+  </div>
+  </div>
+  
+  </div>
+</form>

@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="d-flex flex-column signin_page">
+    
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    
+                    <form class="account_form"[formGroup]="UserFormGroup">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" >Email</label>
+                            <input type="email" formControlName="emailId" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                           
+                            <input type="password" formControlName="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-theme btn-block form_submit_btn"(click)="signIn()" >Sign In</button>
+                    
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
