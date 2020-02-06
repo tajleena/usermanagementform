@@ -25,7 +25,7 @@ const APP_LAZY_ROUTES: Routes = [
      
   },
   {
-     path: 'user/delete', component: DeleteUserComponent
+     path: 'user/delete/:id', component: DeleteUserComponent
   },
  
   {
