@@ -26,7 +26,7 @@ export class UserComponent implements OnInit {
     }
   }
   delete(index) {
-    this.arrUser.splice(index, 2);
+    this.arrUser.splice(index,1);
     
   localStorage.removeItem(index);
   }

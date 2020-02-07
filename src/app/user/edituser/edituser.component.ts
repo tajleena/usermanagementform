@@ -28,12 +28,12 @@ export class EdituserComponent implements OnInit {
    onEditAccount()
   {
     let data={id:this.Uid,name:this.editUserFormGroup.value.name,emailId:this.editUserFormGroup.value.emailId,password:this.editUserFormGroup.value.password};
-
+    console.log(data);
     localStorage.removeItem(this.Uid);
     localStorage.setItem(this.Uid,JSON.stringify(data));
     this.router.navigate(['/user']);
     
-    console.log(this.editUserFormGroup.value)
+    // console.log(this.editUserFormGroup.value)
   }
   }
 
